@@ -36,8 +36,8 @@ class <?= $className ?> extends generated\<?=$className . "\n" ?>
     public function rules()
     {
         return array_merge(
-            parent::rules()
-            [],
+            parent::rules(),
+            []
         );
     }
 
