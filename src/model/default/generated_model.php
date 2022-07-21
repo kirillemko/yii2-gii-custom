@@ -25,7 +25,7 @@ use Yii;
  * This is the model class for table "<?= $generator->generateTableName($tableName) ?>".
  *
  * Run this command in console to regenerate model
- * yii-ci-integration\src\yii gii/customModel --tableName=<?= $generator->generateTableName($tableName) ?> --modelClass=<?= $className ?> --ns=<?= $generator->ns ?>
+ * ./yii gii/customModel --tableName=<?= $generator->generateTableName($tableName) ?> --modelClass=<?= $className ?> --ns=<?= $generator->ns ?>
 
  *
 <?php foreach ($properties as $property => $data): ?>

@@ -22,7 +22,7 @@ namespace <?= $generator->fileNs ?>;
 use Yii;
 
 /**
- * {@inheritdoc}
+ *
  *
  */
 class <?= $className ?> extends generated\<?=$className . "\n" ?>
