@@ -28,17 +28,10 @@ use Yii;
 class <?= $className ?> extends generated\<?=$className . "\n" ?>
 {
 
-    public function behaviors()
+    public function behaviors(): array
     {
         return [];
     }
 
-    public function rules()
-    {
-        return array_merge(
-            parent::rules(),
-            []
-        );
-    }
 
 }

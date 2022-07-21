@@ -40,10 +40,8 @@ use Yii;
  */
 class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . "\n" ?>
 {
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
+
+    public static function tableName(): string
     {
         return '<?= $generator->generateTableName($tableName) ?>';
     }
@@ -58,18 +56,14 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     }
 <?php endif; ?>
 
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
+
+    public function rules(): array
     {
         return [<?= empty($rules) ? '' : ("\n            " . implode(",\n            ", $rules) . ",\n        ") ?>];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
+
+    public function attributeLabels(): array
     {
         return [
 <?php foreach ($labels as $name => $label): ?>
@@ -79,12 +73,8 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     }
 <?php foreach ($relations as $name => $relation): ?>
 
-    /**
-     * Gets query for [[<?= $name ?>]].
-     *
-     * @return <?= $relationsClassHints[$name] . "\n" ?>
-     */
-    public function get<?= $name ?>()
+
+    public function get<?= $name ?>(): <?= $relationsClassHints[$name] . "\n" ?>
     {
         <?= $relation[0] . "\n" ?>
     }

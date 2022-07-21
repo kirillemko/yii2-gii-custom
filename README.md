@@ -49,7 +49,11 @@ to the require section of your composer.json.
 ```
 vendor\kirillemko\yii-ci-integration\src\yii gii/customModel --tableName=pm_kpi_groups --modelClass=
 KpiGroups --ns=app\domain\kpi
+```
 
+Или сгенерировать по маске имени таблиц
+```
+./yii gii/customModel --tableName=uni* --ns=app\\domain\\unit\\models
 ```
 
 
